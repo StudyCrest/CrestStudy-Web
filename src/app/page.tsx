@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+
 import { description } from "./layout";
 
 const Layout = dynamic(() => import("./layout"), { ssr: false });
@@ -11,10 +12,10 @@ export const metadata = {
     description,
     images: [
       {
-        url: "/assets/about-og-image.jpg",
+        url: "/assets/logo.svg",
         width: 1200,
         height: 630,
-        alt: "Home Page Open Graph Image",
+        alt: "Home Page Image",
       },
     ],
   },
@@ -23,7 +24,7 @@ export const metadata = {
 export default function Home() {
   return (
     <Layout>
-      <p className="font-urbanist text-sm">Home page</p>
+      <h1>Home Page</h1>
     </Layout>
   );
 }

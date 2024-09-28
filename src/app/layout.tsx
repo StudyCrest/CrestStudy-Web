@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Urbanist } from "next/font/google";
-import Header from "@components/Header";
+import { Header } from "@components/Header";
 import { Loading } from "@components/Loading";
 import "./globals.css";
 
@@ -67,7 +67,7 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" className={urbanist.className}>
-      <body className="flex flex-col min-h-screen">
+      <body className="min-h-screen">
         <Header />
         <Suspense fallback={<Loading />}>
           <main>{children}</main>

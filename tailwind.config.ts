@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -44,6 +44,9 @@ const config: Config = {
         '2xl': '42rem',   // Double extra large width
         'full': '100%',   // Full width
         'screen': '100vw',// Full viewport width
+      },
+       lineHeight: {
+        'normal': '19.2px'
       },
       spacing: {
         '72': '18rem',
