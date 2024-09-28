@@ -1,37 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
-
-const navMenu = [
-  {
-    name: "Home",
-    url: "/",
-    style: "text-studycrest-primary leading-normal font-semibold pr-4",
-  },
-  {
-    name: "About StudyCrest",
-    url: "/about",
-    style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary pr-4",
-  },
-  {
-    name: "FAQs",
-    url: "/",
-    style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary pr-4",
-  },
-  {
-    name: "Contact Us",
-    url: "/contact",
-    style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary",
-  },
-];
+import Link from "@components/Link";
+import { navMenu } from "@data/navmenu";
 
 export const Header = () => {
   return (
     <header className="bg-white border-b border-studycrest-8 py-4 m-0">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Left Section: Logo */}
         <div className="flex items-center">
           <Image
             src="/assets/logo.svg"
@@ -43,20 +17,14 @@ export const Header = () => {
           <h1 className="sr-only text-xl font-bold">StudyCrest</h1>
         </div>
 
-        {/* Middle Section: Navigation */}
         <nav className="flex space-x-4">
           {navMenu.map((menu) => (
-            <Link href={menu.url} className={menu.style}>
-              {menu.name}
-            </Link>
+            <Link href={menu.url} title={menu.name} extraStyle={menu.style} />
           ))}
         </nav>
 
-        {/* Right Section: Actions (e.g., Profile, Search) */}
         <div className="flex items-center space-x-4">
-          <button className="bg-studycrest-primary text-white px-[22px] py-3 rounded-lg font-semibold leading-normal">
-            Join the waitlist
-          </button>
+          <Link href="/a" title="Join the waitlist" asButton={true} />
         </div>
       </div>
     </header>

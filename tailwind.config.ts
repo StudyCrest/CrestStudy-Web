@@ -45,7 +45,7 @@ const config: Config = {
         'full': '100%',   // Full width
         'screen': '100vw',// Full viewport width
       },
-       lineHeight: {
+      lineHeight: {
         'normal': '19.2px'
       },
       spacing: {

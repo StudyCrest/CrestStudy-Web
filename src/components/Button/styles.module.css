@@ -1,0 +1,27 @@
+.root {
+  @apply font-medium;
+}
+
+.contained {
+  @apply text-white border border-studycrest-primary bg-studycrest-primary rounded-lg;
+}
+
+.outlined {
+  @apply bg-[#FFFFFF] text-studycrest-primary border border-studycrest-primary rounded-lg;
+}
+
+.text {
+  @apply text-studycrest-primary border-none bg-transparent !p-0;
+}
+
+.small {
+  @apply text-sm px-2 py-1;
+}
+
+.medium {
+  @apply text-base px-3 py-1;
+}
+
+.large {
+  @apply text-lg px-[22px] py-3;
+}
