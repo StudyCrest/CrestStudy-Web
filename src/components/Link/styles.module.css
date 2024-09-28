@@ -19,5 +19,5 @@
 }
 
 .large {
-  @apply text-lg px-[22px] py-3;
+  @apply text-base px-[22px] py-3;
 }
