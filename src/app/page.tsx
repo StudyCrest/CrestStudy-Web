@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
-
-import { description } from "./layout";
+import { description } from "@data/seo";
 
 const Layout = dynamic(() => import("./layout"), { ssr: false });
 

@@ -3,15 +3,13 @@ import { Suspense } from "react";
 import { Urbanist } from "next/font/google";
 import { Header } from "@components/Header";
 import { Loading } from "@components/Loading";
+import { description } from "@data/seo";
 import "./globals.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
-export const description =
-  "A solution to help students easily achieve their academic goals by providing tools to organize study schedules, track progress, and maintain motivation";
 
 export const metadata: Metadata = {
   title: "StudyCrest",
