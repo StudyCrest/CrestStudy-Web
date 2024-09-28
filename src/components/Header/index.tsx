@@ -19,12 +19,17 @@ export const Header = () => {
 
         <nav className="flex space-x-4">
           {navMenu.map((menu) => (
-            <Link href={menu.url} title={menu.name} extraStyle={menu.style} />
+            <Link
+              key={menu.id}
+              href={menu.url}
+              title={menu.name}
+              extraStyle={menu.style}
+            />
           ))}
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Link href="/a" title="Join the waitlist" asButton={true} />
+          <Link href="/" title="Join the waitlist" asButton={true} />
         </div>
       </div>
     </header>

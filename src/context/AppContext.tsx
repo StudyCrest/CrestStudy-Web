@@ -10,7 +10,7 @@ import {
 // Define the type for the context value
 interface AppContextType {
   state: string;
-  setState: Dispatch<SetStateAction<any>>;
+  setState: Dispatch<SetStateAction<string>>;
 }
 
 // Initialize the context with undefined as the default value, because null causes the error
