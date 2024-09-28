@@ -73,7 +73,10 @@ const config: Config = {
       },
       transitionDuration: {
         '0': '0ms',
-        '2000': '2000ms',  // Custom slow transition
+        '2000': '2000ms',
+      },
+      fontFamily: {
+        urbanist: ['Urbanist', 'sans-serif'],
       },
     },
   },

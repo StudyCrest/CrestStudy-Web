@@ -1,8 +1,11 @@
+import dynamic from "next/dynamic";
 import { description } from "./layout";
+
+const Layout = dynamic(() => import("./layout"), { ssr: false });
 
 export const metadata = {
   title: "Home - StudyCrest",
-  description,
+  description: description,
   openGraph: {
     title: "Home - StudyCrest",
     description,
@@ -19,9 +22,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>This is the Home page.</p>
-    </div>
+    <Layout>
+      <p className="font-urbanist text-sm">Home page</p>
+    </Layout>
   );
 }
