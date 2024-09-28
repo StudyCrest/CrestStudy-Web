@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import ErrorMessage from "@components/ErrorMessage";
 
 interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   isRequired?: boolean;
@@ -12,8 +12,7 @@ const TextArea: FC<Props> = ({ isRequired, label, error, ...props }) => {
     <div className="flex flex-col w-full">
       {label && (
         <label className="text-white text-sm mb-2">
-          {label}{" "}
-          {isRequired && <span className="text-rose-600">*</span>}
+          {label} {isRequired && <span className="text-rose-600">*</span>}
         </label>
       )}
       {

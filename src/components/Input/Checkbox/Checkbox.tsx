@@ -1,5 +1,5 @@
-import CheckIcon from "@/icons/CheckIcon";
 import React, { FC } from "react";
+import CheckIcon from "@components/icons/CheckIcon";
 import cn from "classnames";
 import s from "./styles.module.css";
 
