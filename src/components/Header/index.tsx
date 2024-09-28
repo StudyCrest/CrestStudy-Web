@@ -4,7 +4,7 @@ import { navMenu } from "@data/navmenu";
 
 export const Header = () => {
   return (
-    <header className="bg-white border-b border-studycrest-8 py-4 m-0">
+    <header className="bg-white border-b border-studycrest-8 py-4 m-0 z-50 fixed top-0 left-0 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Image

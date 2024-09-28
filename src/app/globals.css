@@ -7,3 +7,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.dropping-soon {
+  background: linear-gradient(
+      0deg,
+      rgba(253, 238, 238, 0.1),
+      rgba(253, 238, 238, 0.1)
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f7f5f5 100%);
+}
