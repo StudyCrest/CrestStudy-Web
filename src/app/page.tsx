@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           {/* Right Section: Image */}
-          <div className="lg:w-[40%] w-full hidden lg:block lg:-mt-16">
+          <div className="lg:w-[40%] w-full hidden lg:block mt-44">
             <Image
               src="/assets/heroimage.svg"
               alt="StudyCrest app preview"
