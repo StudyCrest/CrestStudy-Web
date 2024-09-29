@@ -4,9 +4,13 @@ import Image from "next/image";
 import Link from "@components/Link";
 import { navMenu } from "@data/navmenu";
 import { useState } from "react";
+import { MenuIcon } from "@components/icons/MenuIcon";
+import { CloseIcon } from "@components/icons/CloseIcon";
+import useClickOutside from "@hooks/useClickOutside";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const ref = useClickOutside(() => setIsMobileMenuOpen(false));
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -14,7 +18,7 @@ export const Header = () => {
 
   return (
     <header className="bg-white border-b border-studycrest-8 py-4 fixed top-0 left-0 w-full z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -46,21 +50,7 @@ export const Header = () => {
             aria-label="Toggle mobile menu"
             className="text-studycrest-6 focus:outline-none"
           >
-            {/* Hamburger icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            {!isMobileMenuOpen ? <MenuIcon /> : <CloseIcon />}
           </button>
         </div>
 
@@ -72,7 +62,10 @@ export const Header = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <nav className="lg:hidden bg-white border-t mt-5 border-studycrest-8 pb-5">
+        <nav
+          ref={ref}
+          className="lg:hidden bg-white border-t mt-[16px] border-studycrest-8"
+        >
           <ul className="container mx-auto flex flex-col items-start space-y-4 py-5">
             {navMenu.map((menu) => (
               <li key={menu.id}>
