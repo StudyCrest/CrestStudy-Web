@@ -50,7 +50,7 @@ export default function Home() {
               <TextField
                 type="email"
                 placeholder="Enter your email address"
-                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:border-none focus:outline-studycrest-9 w-full lg:w-[260px] xl:w-[373px]"
+                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:outline-none w-full lg:w-[260px] xl:w-[373px]"
               />
               <Button title="Join the waitlist" extraStyle="w-full" />
             </div>
