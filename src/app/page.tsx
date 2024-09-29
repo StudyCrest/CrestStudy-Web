@@ -29,7 +29,7 @@ export default function Home() {
       <section className="bg-white pb-20 xl:pb-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
           {/* Left Section: Text */}
-          <div className="lg:w-1/2 w-full text-left mt-32 lg:mt-52">
+          <div className="lg:w-1/2 w-full text-left mt-28 lg:mt-52">
             <h2 className="text-studycrest-primary font-medium text-sm uppercase mb-4 leading-[16.8px] dropping-soon rounded py-2 px-3 w-[142px] h-[33px]">
               Dropping Soon!!!
             </h2>
