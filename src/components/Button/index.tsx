@@ -6,11 +6,15 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "contained" | "outlined" | "text";
   size?: "large" | "medium" | "small";
   title: string;
+  extraStyle?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(
-  ({ variant = "contained", size = "large", title, ...props }, ref) => {
-    const rootClassName = cn(`${s.root}`, {
+  (
+    { variant = "contained", size = "large", title, extraStyle, ...props },
+    ref
+  ) => {
+    const rootClassName = cn(`${s.root}`, `${extraStyle}`, {
       [s.contained]: variant === "contained",
       [s.outlined]: variant === "outlined",
       [s.text]: variant === "text",
@@ -20,7 +24,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
     });
 
     return (
-      <button ref={ref} {...props} className={rootClassName}>
+      <button ref={ref} {...props} className={`${rootClassName}`}>
         {title}
       </button>
     );

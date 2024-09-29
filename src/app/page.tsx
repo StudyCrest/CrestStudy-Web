@@ -46,13 +46,13 @@ export default function Home() {
               Get notified when we launch
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full max-w-lg">
+            <div className="flex flex-col md:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
               <TextField
                 type="email"
                 placeholder="Enter your email address"
-                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:border-none focus:outline-studycrest-9 w-full"
+                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:border-none focus:outline-studycrest-9 w-full lg:w-[260px] xl:w-[373px]"
               />
-              <Button title="Join the waitlist" />
+              <Button title="Join the waitlist" extraStyle="w-full" />
             </div>
           </div>
 
