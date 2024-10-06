@@ -1,8 +1,9 @@
 import dynamic from "next/dynamic";
-import { description } from "@data/seo";
+import { description } from "@/data/seo";
 import Image from "next/image";
-import Button from "@components/Button";
-import TextField from "@components/Input/TextField";
+import Button from "@/components/Button";
+import TextField from "@/components/Input/TextField";
+import { joinWaitlist } from "@/services/waitlist";
 
 const Layout = dynamic(() => import("./layout"), { ssr: false });
 

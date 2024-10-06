@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import ErrorMessage from "@components/ErrorMessage";
+import ErrorMessage from "@/components/ErrorMessage";
 
 interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   isRequired?: boolean;

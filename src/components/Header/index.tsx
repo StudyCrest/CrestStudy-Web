@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "@components/Link";
-import { navMenu } from "@data/navmenu";
+import Link from "@/components/Link";
+import { navMenu } from "@/data/navmenu";
 import { useState } from "react";
-import { MenuIcon } from "@components/icons/MenuIcon";
-import { CloseIcon } from "@components/icons/CloseIcon";
-import useClickOutside from "@hooks/useClickOutside";
+import { MenuIcon } from "@/components/icons/MenuIcon";
+import { CloseIcon } from "@/components/icons/CloseIcon";
+import useClickOutside from "@/hooks/useClickOutside";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Modal from "@components/Modal";
+import Modal from "@/components/Modal";
 
 interface ContextOptions {
   setModalContent: React.Dispatch<React.SetStateAction<React.ReactNode>>;

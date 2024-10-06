@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Urbanist } from "next/font/google";
-import { Header } from "@components/Header";
-import { Loading } from "@components/Loading";
-import { description } from "@data/seo";
+import { Header } from "@/components/Header";
+import { Loading } from "@/components/Loading";
+import { description } from "@/data/seo";
 import "./globals.css";
 
 const urbanist = Urbanist({

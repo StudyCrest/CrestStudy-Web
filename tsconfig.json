@@ -24,28 +24,28 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@app/*": [
+      "@/app/*": [
         "src/app/*"
       ],
-      "@components/*": [
+      "@/components/*": [
         "src/components/*"
       ],
-      "@data/*": [
+      "@/data/*": [
         "src/data/*"
       ],
-      "@utils/*": [
+      "@/utils/*": [
         "src/utils/*"
       ],
-      "@styles/*": [
+      "@/styles/*": [
         "src/styles/*"
       ],
-      "@services/*": [
+      "@/services/*": [
         "src/services/*"
       ],
-      "@hooks/*": [
+      "@/hooks/*": [
         "src/hooks/*"
       ],
-      "@context/*": [
+      "@/context/*": [
         "src/context/*"
       ]
     }
