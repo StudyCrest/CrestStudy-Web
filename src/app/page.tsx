@@ -64,7 +64,7 @@ export default function Home() {
             onSubmit={handleSubmit(handleJoinWaitlist)}
             className="min-h-[120px]"
           >
-            <div className="flex flex-col md:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
+            <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
               <TextField
                 type="email"
                 placeholder="Enter your email address"
