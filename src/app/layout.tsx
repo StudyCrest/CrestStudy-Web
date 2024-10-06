@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "StudyCrest",
+  title: "StudyCrest - Home",
   description,
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],

@@ -1,17 +1,26 @@
 import React, { ButtonHTMLAttributes, forwardRef } from "react";
 import s from "./styles.module.css";
 import cn from "classnames";
+import ButtonSpinner from "../icons/ButtonSpinner";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "contained" | "outlined" | "text";
   size?: "large" | "medium" | "small";
   title: string;
   extraStyle?: string;
+  loading?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, Props>(
   (
-    { variant = "contained", size = "large", title, extraStyle, ...props },
+    {
+      variant = "contained",
+      size = "large",
+      title,
+      extraStyle,
+      loading,
+      ...props
+    },
     ref
   ) => {
     const rootClassName = cn(`${s.root}`, `${extraStyle}`, {
@@ -25,7 +34,13 @@ const Button = forwardRef<HTMLButtonElement, Props>(
 
     return (
       <button ref={ref} {...props} className={`${rootClassName}`}>
-        {title}
+        {loading ? (
+          <span className="flex justify-center py-0.5">
+            <ButtonSpinner />
+          </span>
+        ) : (
+          title
+        )}
       </button>
     );
   }

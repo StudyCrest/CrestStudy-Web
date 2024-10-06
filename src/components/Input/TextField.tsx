@@ -5,9 +5,16 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   isRequired?: boolean;
   label?: string;
   error?: string;
+  register?: any;
 }
 
-const TextField: FC<Props> = ({ isRequired, label, error, ...props }) => {
+const TextField: FC<Props> = ({
+  isRequired,
+  label,
+  error,
+  register,
+  ...props
+}) => {
   return (
     <div className="flex flex-col w-full">
       {label && (
@@ -21,10 +28,11 @@ const TextField: FC<Props> = ({ isRequired, label, error, ...props }) => {
             "min-h-[20px] text-black flex m-0 placeholder:text-gray-400 placeholder:text-sm px-4 py-1  rounded-md outline-none bg-white border border-gray-300 focus:border-blue-300 transition-all"
           }
           {...props}
+          {...register}
         />
       }
       {Boolean(error?.trim()) && (
-        <ErrorMessage className="mt-[4px] p-0" message={error as string} />
+        <ErrorMessage className="pl-1 pt-[6px] p-0" message={error as string} />
       )}
     </div>
   );
