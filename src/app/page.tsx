@@ -98,7 +98,7 @@ export default function Home() {
         <div className="lg:w-[40%] w-full hidden lg:block mt-44">
           <Image
             src="/assets/heroimage.svg"
-            alt="StudyCrest app preview"
+            alt="CrestStudy app preview"
             width={500}
             height={500}
             className="rounded-lg"

@@ -12,27 +12,27 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "StudyCrest - Home",
+  title: "CrestStudy - Home",
   description,
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 
   // SEO Metadata
-  keywords: ["Education", "Study", "StudyCrest", "Academics"],
+  keywords: ["Education", "Study", "CrestStudy", "Academics"],
 
   // Open Graph (OG) tags for social sharing
   openGraph: {
     type: "website",
-    url: "https://www.studycrest.io",
-    title: "StudyCrest",
+    url: "https://www.creststudy.com",
+    title: "CrestStudy",
     description,
     images: [
       {
         url: "/assets/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "StudyCrest Open Graph Image",
+        alt: "CrestStudy Open Graph Image",
       },
     ],
     locale: "en_US",
@@ -42,19 +42,19 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@your_twitter_handle",
-    title: "StudyCrest",
+    title: "CrestStudy",
     description,
     images: [
       {
         url: "/assets/twitter-image.jpg",
-        alt: "StudyCrest Twitter Card Image",
+        alt: "CrestStudy Twitter Card Image",
       },
     ],
   },
 
   // Canonical URL
   alternates: {
-    canonical: "https://www.studycrest.io",
+    canonical: "https://www.creststudy.com",
   },
 };
 
