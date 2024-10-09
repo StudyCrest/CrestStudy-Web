@@ -39,6 +39,7 @@ export const Header = () => {
               href={menu.url}
               title={menu.name}
               extraStyle={menu.style}
+              external={true}
             />
           ))}
         </nav>
@@ -56,7 +57,11 @@ export const Header = () => {
 
         {/* Call to action button */}
         <div className="hidden lg:flex items-center space-x-4">
-          <Link href="/" title="Join the waitlist" asButton={true} />
+          <Link
+            href="#waitlistform"
+            title="Join the waitlist"
+            asButton={true}
+          />
         </div>
       </div>
 
@@ -66,13 +71,13 @@ export const Header = () => {
           ref={ref}
           className="lg:hidden bg-white border-t mt-[16px] border-studycrest-8"
         >
-          <ul className="container mx-auto flex flex-col items-start space-y-4 py-5">
+          <ul className="container mx-auto flex flex-col items-start space-y-4 py-3">
             {navMenu.map((menu) => (
               <li key={menu.id}>
-                <Link href={menu.url} title={menu.name} />
+                <Link href={menu.url} title={menu.name} external={true} />
               </li>
             ))}
-            <li className="pt-3 px-4">
+            <li className="pt-3 px-4 hidden">
               <Link href="/" title="Join the waitlist" asButton={true} />
             </li>
           </ul>
