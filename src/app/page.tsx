@@ -44,7 +44,7 @@ export default function Home() {
     <section className="bg-white pb-20 xl:pb-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
         {/* Left Section: Text */}
-        <div className="lg:w-1/2 w-full text-left mt-28 lg:mt-52">
+        <div className="lg:w-1/2 w-full text-left mt-28 lg:mt-32">
           <h2 className="text-studycrest-primary font-medium text-sm uppercase mb-4 leading-[16.8px] dropping-soon rounded py-2 px-3 w-[142px] h-[33px]">
             Dropping Soon!!!
           </h2>
@@ -56,11 +56,11 @@ export default function Home() {
             designed to make learning more efficient and fun — everything you
             need to stay on top of your academic game is just around the corner.
           </p>
-          <p className="text-sm text-studycrest-4 mb-3 font-semibold uppercase leading-[21.76px]">
+          {/* <p className="text-sm text-studycrest-4 mb-3 font-semibold uppercase leading-[21.76px]">
             Get notified when we launch
-          </p>
+          </p> */}
 
-          <form
+          {/* <form
             onSubmit={handleSubmit(handleJoinWaitlist)}
             className="min-h-[120px]"
             id="waitlistform"
@@ -92,7 +92,7 @@ export default function Home() {
                 message={errors.email.message as string}
               />
             )}
-          </form>
+          </form> */}
         </div>
 
         {/* Right Section: Image */}
