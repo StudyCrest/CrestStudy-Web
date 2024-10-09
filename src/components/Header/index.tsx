@@ -59,7 +59,7 @@ export const Header = () => {
         <div className="hidden lg:flex items-center space-x-4">
           <Link
             href="#waitlistform"
-            title="Join the waitlist"
+            title="Launching soon..."
             asButton={true}
           />
         </div>
