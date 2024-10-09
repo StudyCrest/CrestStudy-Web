@@ -4,10 +4,10 @@ import { useForm } from "react-hook-form";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 import Image from "next/image";
-import Button from "@/components/Button";
-import TextField from "@/components/Input/TextField";
+// import Button from "@/components/Button";
+// import TextField from "@/components/Input/TextField";
 import { joinWaitlist } from "@/services/waitlist/waitlist.service";
-import ErrorMessage from "@/components/ErrorMessage";
+// import ErrorMessage from "@/components/ErrorMessage";
 
 interface WaitlistFormValues {
   email: string;
