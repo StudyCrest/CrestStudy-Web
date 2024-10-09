@@ -1,44 +1,44 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import { Toaster } from "react-hot-toast";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import Image from "next/image";
 // import Button from "@/components/Button";
 // import TextField from "@/components/Input/TextField";
-import { joinWaitlist } from "@/services/waitlist/waitlist.service";
+// import { joinWaitlist } from "@/services/waitlist/waitlist.service";
 // import ErrorMessage from "@/components/ErrorMessage";
 
-interface WaitlistFormValues {
-  email: string;
-}
+// interface WaitlistFormValues {
+//   email: string;
+// }
 
 export default function Home() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<WaitlistFormValues>();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors, isSubmitting },
+  //   reset,
+  // } = useForm<WaitlistFormValues>();
 
   // Join waitlist function
-  const handleJoinWaitlist = async (data: WaitlistFormValues) => {
-    try {
-      const response = await joinWaitlist(data);
-      toast.success(`${response?.message}`, {
-        position: "top-right",
-        style: {
-          background: "#ffffff",
-          color: "#637A87",
-        },
-      });
-      reset(); // Reset the form after successful submission
-    } catch (error: any) {
-      toast.error(error.message || "Failed to join waitlist.", {
-        position: "top-right",
-      });
-    }
-  };
+  // const handleJoinWaitlist = async (data: WaitlistFormValues) => {
+  //   try {
+  //     const response = await joinWaitlist(data);
+  //     toast.success(`${response?.message}`, {
+  //       position: "top-right",
+  //       style: {
+  //         background: "#ffffff",
+  //         color: "#637A87",
+  //       },
+  //     });
+  //     reset(); // Reset the form after successful submission
+  //   } catch (error: any) {
+  //     toast.error(error.message || "Failed to join waitlist.", {
+  //       position: "top-right",
+  //     });
+  //   }
+  // };
 
   return (
     <section className="bg-white pb-20 xl:pb-0">
