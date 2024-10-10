@@ -1,2 +1,1 @@
-export const description =
-  "A solution to help students easily achieve their academic goals by providing tools to organize study schedules, track progress, and maintain motivation";
+export const description = "CrestStudy offers educational tools and resources to help students achieve academic success. Start your study journey today!";

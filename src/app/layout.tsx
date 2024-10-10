@@ -19,7 +19,14 @@ export const metadata: Metadata = {
   },
 
   // SEO Metadata
-  keywords: ["Education", "Study", "CrestStudy", "Academics"],
+  keywords: [
+    "Education",
+    "Study",
+    "CrestStudy",
+    "Academics",
+    "Study Tools",
+    "Online Learning",
+  ],
 
   // Open Graph (OG) tags for social sharing
   openGraph: {
@@ -29,7 +36,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: "/assets/og-image.jpg",
+        url: "https://www.creststudy.com/assets/creststudy-og.JPG",
         width: 1200,
         height: 630,
         alt: "CrestStudy Open Graph Image",
@@ -41,12 +48,13 @@ export const metadata: Metadata = {
   // Twitter Card for sharing on Twitter
   twitter: {
     card: "summary_large_image",
-    site: "@your_twitter_handle",
-    title: "CrestStudy",
-    description,
+    site: "@CrestStudy_",
+    title: "CrestStudy - Tools for Academic Success",
+    description:
+      "Enhance your academic performance with CrestStudy's comprehensive study tools.",
     images: [
       {
-        url: "/assets/twitter-image.jpg",
+        url: "https://www.creststudy.com/assets/creststudytwitter.JPEG",
         alt: "CrestStudy Twitter Card Image",
       },
     ],
