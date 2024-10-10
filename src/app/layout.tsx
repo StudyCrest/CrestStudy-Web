@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "CrestStudy - Home",
+  title: "CrestStudy - Academic Success Tools",
   description,
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
   },
-
   // Twitter Card for sharing on Twitter
   twitter: {
     card: "summary_large_image",
@@ -59,7 +58,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   // Canonical URL
   alternates: {
     canonical: "https://www.creststudy.com",
