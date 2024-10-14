@@ -58,8 +58,9 @@ export const Header = () => {
         {/* Call to action button */}
         <div className="hidden lg:flex items-center space-x-4">
           <Link
-            href="#waitlistform"
-            title="Launching soon..."
+            href="https://chat.whatsapp.com/Ix1HTUsScx8HrcIHkS1zAj"
+            target="_blank"
+            title="Join WhatsApp Community"
             asButton={true}
           />
         </div>

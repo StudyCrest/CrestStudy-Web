@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
@@ -8,6 +9,7 @@ import Button from "@/components/Button";
 import TextField from "@/components/Input/TextField";
 import { joinWaitlist } from "@/services/waitlist/waitlist.service";
 import ErrorMessage from "@/components/ErrorMessage";
+import Link from "@/components/Link";
 
 interface WaitlistFormValues {
   email: string;
@@ -20,6 +22,7 @@ export default function Home() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<WaitlistFormValues>();
+  const [showCommunity, setShowCommunity] = useState(false);
 
   // Join waitlist function
   const handleJoinWaitlist = async (data: WaitlistFormValues) => {
@@ -33,6 +36,7 @@ export default function Home() {
         },
       });
       reset(); // Reset the form after successful submission
+      setShowCommunity(true);
     } catch (error: any) {
       toast.error(error.message || "Failed to join waitlist.", {
         position: "top-right",
@@ -60,39 +64,60 @@ export default function Home() {
             Get notified when we launch
           </p>
 
-          <form
-            onSubmit={handleSubmit(handleJoinWaitlist)}
-            className="min-h-[120px]"
-            id="waitlistform"
-          >
-            <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
-              <TextField
-                type="email"
-                placeholder="Enter your email address"
-                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:outline-none w-full lg:w-[260px] xl:w-[373px]"
-                register={register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Please enter a valid email address",
-                  },
-                })}
-              />
-
-              <Button
-                title="Join the waitlist"
-                extraStyle="w-full"
-                loading={isSubmitting}
-                disabled={isSubmitting}
+          {showCommunity ? (
+            <div className="border border-studycrest-2 bg-studycrest-1 rounded-xl px-3 pt-3 pb-7 w-full">
+              <p className="pb-5">
+                We&#39;re excited to invite you to join our exclusive CrestStudy
+                community!
+              </p>
+              <p className="pb-7">
+                As a member, you&#39;ll receive: First-hand updates on about
+                launch date and future feature releases, A chance to be an
+                Ambassador and the opportunity to provide personal feedback on
+                the app and help us make it even better for students like you.
+              </p>
+              <Link
+                href={"https://chat.whatsapp.com/Ix1HTUsScx8HrcIHkS1zAj"}
+                title={"Join WhatsApp Community"}
+                extraStyle="text-white border border-studycrest-primary bg-studycrest-primary rounded-lg cursor-pointer"
+                external={true}
               />
             </div>
-            {errors.email && (
-              <ErrorMessage
-                className="pl-1 pt-[6px] p-0"
-                message={errors.email.message as string}
-              />
-            )}
-          </form>
+          ) : (
+            <form
+              onSubmit={handleSubmit(handleJoinWaitlist)}
+              className="min-h-[120px]"
+              id="waitlistform"
+            >
+              <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
+                <TextField
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:outline-none w-full lg:w-[260px] xl:w-[373px]"
+                  register={register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
+                />
+
+                <Button
+                  title="Join the waitlist"
+                  extraStyle="w-full"
+                  loading={isSubmitting}
+                  disabled={isSubmitting}
+                />
+              </div>
+              {errors.email && (
+                <ErrorMessage
+                  className="pl-1 pt-[6px] p-0"
+                  message={errors.email.message as string}
+                />
+              )}
+            </form>
+          )}
         </div>
 
         {/* Right Section: Image */}
