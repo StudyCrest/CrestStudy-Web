@@ -78,8 +78,13 @@ export const Header = () => {
                 <Link href={menu.url} title={menu.name} external={true} />
               </li>
             ))}
-            <li className="pt-3 px-4 hidden">
-              <Link href="/" title="Join the waitlist" asButton={true} />
+            <li className="pt-3 px-4">
+              <Link
+                href="https://chat.whatsapp.com/Ix1HTUsScx8HrcIHkS1zAj"
+                target="_blank"
+                title="Join WhatsApp Community"
+                asButton={true}
+              />
             </li>
           </ul>
         </nav>
