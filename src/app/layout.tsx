@@ -12,20 +12,23 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "CrestStudy - Academic Success Tools",
+  title: "CrestStudy - Crush Your Academic Goals with Ease",
   description,
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/favicon.png", type: "image/png" }],
   },
 
   // SEO Metadata
   keywords: [
     "Education",
     "Study",
+    "Crest",
     "CrestStudy",
     "Academics",
     "Study Tools",
     "Online Learning",
+    "Crest Study",
+    "Study Crest",
   ],
 
   // Open Graph (OG) tags for social sharing
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
         url: "https://www.creststudy.com/assets/creststudy-og.JPG",
         width: 1200,
         height: 630,
-        alt: "CrestStudy Open Graph Image",
+        alt: "CrestStudy - Crush Your Academic Goals with Ease",
       },
     ],
     locale: "en_US",
@@ -48,9 +51,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@CrestStudy_",
-    title: "CrestStudy - Tools for Academic Success",
-    description:
-      "Enhance your academic performance with CrestStudy's comprehensive study tools.",
+    title: "CrestStudy",
+    description: "Crush Your Academic Goals with Ease",
     images: [
       {
         url: "https://www.creststudy.com/assets/creststudytwitter.JPEG",
