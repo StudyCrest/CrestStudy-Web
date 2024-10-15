@@ -18,8 +18,8 @@ const WaitlistSubmission = () => {
           <Link
             href={"https://chat.whatsapp.com/Ix1HTUsScx8HrcIHkS1zAj"}
             title={"Join WhatsApp Community"}
-            extraStyle="text-white border border-studycrest-primary bg-studycrest-primary rounded-lg px-4 py-2 cursor-pointer"
             external={true}
+            asButton={true}
           />
         </div>
       </div>
