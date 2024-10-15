@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { Urbanist } from "next/font/google";
-import { Header } from "@/components/Header";
-import { Loading } from "@/components/Loading";
 import { description } from "@/data/seo";
 import "./globals.css";
+import ClientLayout from "./ClientLayout";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -74,10 +72,7 @@ export default function Layout({
   return (
     <html lang="en" className={urbanist.className}>
       <body className="min-h-screen">
-        <Header />
-        <Suspense fallback={<Loading />}>
-          <main>{children}</main>
-        </Suspense>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

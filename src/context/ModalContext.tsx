@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import Modal from "@/components/Modal";
 
 interface ContextOptions {
@@ -12,11 +14,11 @@ const ModalProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [modalContent, setModalContent] = useState<React.ReactNode | null>(
     null
   );
-  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (modalContent) setModalContent(null);
-  }, [router.pathname]);
+  }, [pathname]);
 
   return (
     <ModalContext.Provider value={{ setModalContent }}>
