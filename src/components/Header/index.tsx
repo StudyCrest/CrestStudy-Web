@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-studycrest-10 border-b border-studycrest-8 py-4 fixed top-0 left-0 w-full z-50">
+    <header className="bg-studycrest-11 border-b border-studycrest-8 py-4 fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -41,7 +41,7 @@ export const Header = () => {
               href={menu.url}
               title={menu.name}
               extraStyle={
-                pathname === menu.url
+                pathname == menu.url
                   ? "text-studycrest-primary leading-[19.2px] font-semibold pr-4"
                   : "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4"
               }

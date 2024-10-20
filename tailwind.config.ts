@@ -37,6 +37,8 @@ const config: Config = {
         "studycrest-9": "#CED0D34D",
         "studycrest-10": "#E6F3FC99",
         "studycrest-11": "#E6F3FC",
+        "studycrest-12": "#96A7B2",
+        "studycrest-13": "#14181B"
       },
       width: {
         xs: "20rem", // Custom width for extra small components
@@ -83,6 +85,9 @@ const config: Config = {
       },
       fontFamily: {
         urbanist: ["Urbanist", "sans-serif"],
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(180deg, #EFF2F4 0%, rgba(239, 242, 244, 0) 100%)',
       },
     },
   },
