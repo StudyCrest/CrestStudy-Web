@@ -17,7 +17,7 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
     {
       href,
       variant = "contained",
-      size = "large",
+      size = "medium",
       title,
       asButton = false,
       external = false,

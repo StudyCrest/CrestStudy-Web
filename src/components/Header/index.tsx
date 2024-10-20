@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "@/components/Link";
 import { navMenu } from "@/data/navmenu";
 import { useState } from "react";
@@ -11,6 +12,7 @@ import useClickOutside from "@/hooks/useClickOutside";
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const ref = useClickOutside(() => setIsMobileMenuOpen(false));
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -38,7 +40,11 @@ export const Header = () => {
               key={menu.id}
               href={menu.url}
               title={menu.name}
-              extraStyle={menu.style}
+              extraStyle={
+                pathname === menu.url
+                  ? "text-studycrest-primary leading-[19.2px] font-semibold pr-4"
+                  : "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4"
+              }
             />
           ))}
         </nav>
@@ -64,12 +70,20 @@ export const Header = () => {
       {isMobileMenuOpen && (
         <nav
           ref={ref}
-          className="lg:hidden bg-white border-t mt-[16px] border-studycrest-8"
+          className="lg:hidden border-t mt-[16px] border-studycrest-8 z-50"
         >
           <ul className="container mx-auto flex flex-col items-start space-y-4 py-3">
             {navMenu.map((menu) => (
               <li key={menu.id}>
-                <Link href={menu.url} title={menu.name} />
+                <Link
+                  href={menu.url}
+                  title={menu.name}
+                  extraStyle={
+                    pathname === menu.url
+                      ? "text-studycrest-primary leading-[19.2px] font-semibold pr-4"
+                      : "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4"
+                  }
+                />
               </li>
             ))}
             <li className="pt-3 px-4">
