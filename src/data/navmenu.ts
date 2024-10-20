@@ -3,27 +3,27 @@ export const navMenu = [
     id: 1,
     name: "Home",
     url: "/",
-    style: "text-studycrest-primary leading-normal font-semibold pr-4",
+    style: "text-studycrest-primary leading-[19.2px] font-semibold pr-4",
   },
   {
     id: 2,
-    name: "LinkedIn",
-    url: "http://linkedin.com/company/crest-study",
+    name: "About CrestStudy",
+    url: "/about",
     style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary pr-4",
+      "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4",
   },
   {
     id: 3,
-    name: "Twitter",
-    url: "https://x.com/CrestStudy_",
+    name: "Blog",
+    url: "https://creststudy.hashnode.dev/",
     style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary pr-4",
+      "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4",
   },
   {
     id: 4,
-    name: "Instagram",
-    url: "https://www.instagram.com/creststudy_/",
+    name: "Contact Us",
+    url: "/contact",
     style:
-      "text-studycrest-7 leading-normal font-medium hover:text-studycrest-primary",
+      "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary",
   },
 ];

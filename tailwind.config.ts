@@ -34,7 +34,8 @@ const config: Config = {
         "studycrest-6": '#242428',
         "studycrest-7": '#B1BEC6',
         "studycrest-8": '#E4E8EB80',
-        "studycrest-9": '#CED0D34D'
+        "studycrest-9": '#CED0D34D',
+        "studycrest-10": '#E6F3FC99'
       },
       width: {
         'xs': '20rem',    // Custom width for extra small components
