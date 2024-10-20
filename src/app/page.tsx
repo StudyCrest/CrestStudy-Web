@@ -1,5 +1,6 @@
 "use client";
 
+import { Card } from "@/components/Card";
 import Feature from "@/components/Features";
 import Link from "@/components/Link";
 import { TitleName } from "@/components/SectionComp/TitleName";
@@ -60,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* CrestStudy Features */}
-      <section className="mt-20">
+      <section className="mt-24">
         <div className="flex justify-center">
           <TitleTag title="CrestStudy features" />
         </div>
@@ -74,7 +75,7 @@ export default function Home() {
             Potential
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
           <div className="mr-5">
             <div className="mb-5">
               <Feature
@@ -83,30 +84,59 @@ export default function Home() {
                   "Set daily sessions and track progress with automated to-do lists."
                 }
                 image={"/assets/study-schedule.svg"}
+                noWrap={true}
               />
             </div>
             <Feature
-              title={"Personalized Study Schedule"}
+              title={"Weekly Report Card & Analytics"}
               description={
-                "Set daily sessions and track progress with automated to-do lists."
+                "You receive a detailed weekly report card from us with analytics on your study habits and progress, helping you track your performance in each course."
               }
               image={"/assets/weekly-analytics.svg"}
+              noWrap={true}
             />
           </div>
           <div>
             <Image
               src={"/assets/feature-main.svg"}
               alt="CrestStudy app"
-              width={400}
-              height={400}
+              width={480}
+              height={480}
               className="rounded-lg"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="mr-3 w-[307px]">
+            <Feature
+              title={"Daily Streaks & Rewards"}
+              description={
+                "Stay motivated with rewards for your daily study streaks."
+              }
+              image={"/assets/streak.svg"}
+            />
+          </div>
+          <div className="mr-3 w-[307px]">
+            <Feature
+              title={"Automated To-Do Lists"}
+              description={
+                "Organize your tasks effortlessly with our automated to-do lists that keep you focused on what needs to be done each day."
+              }
+              image={"/assets/todo.svg"}
+            />
+          </div>
+          <div className="w-[307px]">
+            <Feature
+              title={"Reminders & Notifications"}
+              description={"Never miss a session with our daily reminders."}
+              image={"/assets/reminder.svg"}
             />
           </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="mt-20 text-center">
+      <section className="mt-24 text-center">
         <div className="flex justify-center">
           <TitleTag title="How it works" />
         </div>
@@ -116,10 +146,31 @@ export default function Home() {
             extraStyle="w-[563px]"
           />
         </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center mt-5">
+          <div className="mr-5">
+            <Card
+              image="/assets/create-account.svg"
+              title="Create an account"
+              description="Start by signing up with your email or social media accounts. It's quick and easy!"
+            />
+          </div>
+          <div className="mr-5">
+            <Card
+              image="/assets/setting.svg"
+              title="Complete KYC & Personalize Dashboard"
+              description="Complete the KYC process by entering your school, academic level, and courses to tailor the platform to your specific needs."
+            />
+          </div>
+          <Card
+            image="/assets/study-benefit.svg"
+            title="Enjoy Study Benefits"
+            description="Access personalized schedules, practice questions, receive timely reminders, and track your progress,"
+          />
+        </div>
       </section>
 
       {/* FAQs */}
-      <section className="mt-20 text-center">
+      <section className="mt-24 text-center">
         <div className="flex justify-center">
           <TitleTag title="Frequently Asked Questions" />
         </div>
