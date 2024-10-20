@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "@/components/Card";
+import Faq from "@/components/Faq";
 import Feature from "@/components/Features";
 import Link from "@/components/Link";
 import { TitleName } from "@/components/SectionComp/TitleName";
@@ -179,6 +180,20 @@ export default function Home() {
             title="Have a question? We've got you covered"
             extraStyle="w-[420px]"
           />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
+          <div className="flex justify-end items-start -mt-14 w-[30%]">
+            <Image
+              src="/assets/faq.svg"
+              alt="CrestStudy FAQs"
+              width={300}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+          <div className="w-[70%]">
+            <Faq />
+          </div>
         </div>
       </section>
     </section>

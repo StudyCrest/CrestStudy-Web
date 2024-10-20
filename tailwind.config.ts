@@ -38,7 +38,12 @@ const config: Config = {
         "studycrest-10": "#E6F3FC99",
         "studycrest-11": "#E6F3FC",
         "studycrest-12": "#96A7B2",
-        "studycrest-13": "#14181B"
+        "studycrest-13": "#14181B",
+        "studycrest-14": "#E4E8EB",
+        "studycrest-15": "#E6F3FCB2",
+        "studycrest-16": "#93CDF0",
+        "studycrest-17": "#EFF2F4",
+        "studycrest-18": "#283136"
       },
       width: {
         xs: "20rem", // Custom width for extra small components
@@ -87,7 +92,8 @@ const config: Config = {
         urbanist: ["Urbanist", "sans-serif"],
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(180deg, #EFF2F4 0%, rgba(239, 242, 244, 0) 100%)',
+        "custom-gradient":
+          "linear-gradient(180deg, #EFF2F4 0%, rgba(239, 242, 244, 0) 100%)",
       },
     },
   },
