@@ -56,7 +56,7 @@ export default function Home() {
               width={800}
               height={800}
               className="rounded-lg"
-              style={{ maxWidth: "100%", height: "auto" }} // Ensures image responsiveness
+              style={{ maxWidth: "100%", height: "auto" }}
             />
           </div>
         </div>
