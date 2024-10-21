@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="pb-20">
+    <section className="pb-40">
       {/* Hero Section */}
       <section className="bg-studycrest-11 min-h-screen">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

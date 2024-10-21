@@ -3,11 +3,31 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import LinkComp from "../Link";
+import { TitleTag } from "../SectionComp/TitleTag";
 
 export default function Footer() {
   const pathname = usePathname();
+
   return (
-    <div className="bg-studycrest-19 py-10">
+    <div className="relative bg-studycrest-19 pb-10 pt-40">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 absolute -top-24 left-20">
+        <div className="bg-studycrest-20 rounded-lg shadow-footer">
+          <div className="flex justify-between py-[48px] px-10">
+            <div className="flex flex-col items-start">
+              <div className="flex justify-center">
+                <TitleTag title="Ready to get Started?" />
+              </div>
+              <h2 className="text-studycrest-13 font-semibold text-2xl leading-[33px] w-[519px]">
+                Transform Your Study Habits and Achieve Academic Excellence with
+                CrestStudy
+              </h2>
+            </div>
+            <div className="hidden lg:flex items-center space-x-4">
+              <LinkComp href="/" title="Get Started" asButton={true} />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-center items-center">
         <div className="bg-studycrest-20 w-[56px] h-[56px] rounded-[48px] flex justify-center">
           <Image
