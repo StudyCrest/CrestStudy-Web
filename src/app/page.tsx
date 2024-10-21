@@ -12,22 +12,22 @@ export default function Home() {
   return (
     <section className="pb-40">
       {/* Hero Section */}
-      <section className="bg-studycrest-11 min-h-screen">
+      <section className="bg-studycrest-11 max-h-full lg:max-h-full 2xl:pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <div className="w-[838px] text-center mt-28 lg:mt-40">
-              <h1 className="text-3xl sm:text-4xl lg:text-[56px] leading-tight lg:leading-[67.2px] font-semibold mb-4 text-studycrest-6">
+            <div className="w-full max-w-[838px] text-center mt-32 xl:mt-40">
+              <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] leading-tight lg:leading-[67.2px] font-semibold mb-4 text-studycrest-6">
                 CrestStudy - Academic Success Made Simple and Achievable.
               </h1>
               <div className="flex justify-center mb-7">
-                <p className="w-[575px] text-center text-base text-studycrest-3 font-normal leading-relaxed lg:leading-[25.92px]">
+                <p className="w-full max-w-[575px] text-center text-[15px] sm:text-base text-studycrest-3 font-normal leading-relaxed lg:leading-[25.92px]">
                   Our personalized study schedules, progress-tracking tools, and
                   daily reminders keep you on course to achieve your academic
                   goals effortlessly.
                 </p>
               </div>
-              <div className="flex justify-center">
-                <div className="mr-5">
+              <div className="flex flex-col sm:flex-row justify-center">
+                <div className="mr-0 sm:mr-5">
                   <Link
                     href="/"
                     title="Get Started"
@@ -35,7 +35,7 @@ export default function Home() {
                     size="large"
                   />
                 </div>
-                <div>
+                <div className="mt-10 sm:mt-0">
                   <Link
                     href="/contact"
                     title="Contact Us"
@@ -56,13 +56,14 @@ export default function Home() {
               width={800}
               height={800}
               className="rounded-lg"
+              style={{ maxWidth: "100%", height: "auto" }} // Ensures image responsiveness
             />
           </div>
         </div>
       </section>
 
       {/* CrestStudy Features */}
-      <section className="mt-24">
+      <section className="mt-16 sm:mt-24">
         <div className="flex justify-center">
           <TitleTag title="CrestStudy features" />
         </div>
@@ -70,14 +71,14 @@ export default function Home() {
           <TitleName title="Why choose CrestStudy?" />
         </div>
         <div className="flex justify-center mb-7">
-          <p className="w-[550px] text-center text-base text-studycrest-12 font-normal leading-relaxed lg:leading-[22.72px]">
+          <p className="px-6 sm:px-0 sm:w-[550px] text-center text-[15px] sm:text-base text-studycrest-12 font-normal leading-relaxed lg:leading-[22.72px]">
             CrestStudy empowers students with Tailored Study Plans, Expert
             Guidance, and Comprehensive Resources to Achieve Their Full
             Potential
           </p>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-          <div className="mr-5">
+          <div className="lg:mr-5">
             <div className="mb-5">
               <Feature
                 title={"Personalized Study Schedule"}
@@ -97,7 +98,7 @@ export default function Home() {
               noWrap={true}
             />
           </div>
-          <div>
+          <div className="hidden lg:flex lg:items-start">
             <Image
               src={"/assets/feature-main.svg"}
               alt="CrestStudy app"
@@ -107,29 +108,32 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="mr-3 w-[307px]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center items-center lg:items-start">
+          <div className="lg:mr-3 lg:w-[300px]">
             <Feature
               title={"Daily Streaks & Rewards"}
               description={
                 "Stay motivated with rewards for your daily study streaks."
               }
+              noWrap={true}
               image={"/assets/streak.svg"}
             />
           </div>
-          <div className="mr-3 w-[307px]">
+          <div className="lg:mr-3 lg:w-[300px]">
             <Feature
               title={"Automated To-Do Lists"}
               description={
                 "Organize your tasks effortlessly with our automated to-do lists that keep you focused on what needs to be done each day."
               }
+              noWrap={true}
               image={"/assets/todo.svg"}
             />
           </div>
-          <div className="w-[307px]">
+          <div className="lg:w-[300px]">
             <Feature
               title={"Reminders & Notifications"}
               description={"Never miss a session with our daily reminders."}
+              noWrap={true}
               image={"/assets/reminder.svg"}
             />
           </div>
@@ -137,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="mt-24 text-center">
+      <section className="mt-16 sm:mt-24 text-center">
         <div className="flex justify-center">
           <TitleTag title="How it works" />
         </div>
@@ -147,7 +151,7 @@ export default function Home() {
             extraStyle="w-[563px]"
           />
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center mt-5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center mt-5">
           <div className="mr-5">
             <Card
               image="/assets/create-account.svg"
@@ -171,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* FAQs */}
-      <section className="mt-24 text-center">
+      <section className="mt-16 sm:mt-24 text-center">
         <div className="flex justify-center">
           <TitleTag title="Frequently Asked Questions" />
         </div>
@@ -182,7 +186,7 @@ export default function Home() {
           />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
-          <div className="flex justify-end items-start -mt-14 w-[30%]">
+          <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
             <Image
               src="/assets/faq.svg"
               alt="CrestStudy FAQs"
@@ -191,7 +195,7 @@ export default function Home() {
               className="rounded-lg"
             />
           </div>
-          <div className="w-[70%]">
+          <div className="lg:w-[70%]">
             <Faq />
           </div>
         </div>

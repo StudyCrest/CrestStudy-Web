@@ -9,20 +9,20 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <div className="relative bg-studycrest-19 pb-10 pt-40">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 absolute -top-24 left-20">
+    <div className="relative bg-studycrest-19 pb-10 pt-52 sm:pt-40">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 absolute -top-24 left-1/2 transform -translate-x-1/2">
         <div className="bg-studycrest-20 rounded-lg shadow-footer">
-          <div className="flex justify-between py-[48px] px-10">
-            <div className="flex flex-col items-start">
+          <div className="flex flex-col items-center sm:items-start lg:flex-row justify-between py-5 lg:py-[48px] px-10">
+            <div className="flex flex-col items-center sm:items-start">
               <div className="flex justify-center">
                 <TitleTag title="Ready to get Started?" />
               </div>
-              <h2 className="text-studycrest-13 font-semibold text-2xl leading-[33px] w-[519px]">
+              <h2 className="text-studycrest-13 font-semibold text-xl sm:text-2xl leading-[33px] sm:w-[519px] text-center sm:text-left">
                 Transform Your Study Habits and Achieve Academic Excellence with
                 CrestStudy
               </h2>
             </div>
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-4 mt-5 lg:mt-0">
               <LinkComp href="/" title="Get Started" asButton={true} />
             </div>
           </div>

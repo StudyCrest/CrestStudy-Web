@@ -16,9 +16,9 @@ const FaqToggle = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3
-          className={`text-studycrest-13 ${
+          className={`text-studycrest-13 w-[75%] sm:w-full ${
             isOpen ? "font-semibold" : "font-normal"
-          } text-lg leading-[20.16px]`}
+          } text-lg sm:leading-[20.16px] text-left`}
         >
           {question}
         </h3>
@@ -37,7 +37,7 @@ const FaqToggle = ({ question, answer }) => {
           isOpen ? "max-h-40 p-4" : "max-h-0"
         }`}
       >
-        <p className="text-studycrest-13 text-base font-normal leading-[27.52px]">
+        <p className="text-studycrest-13 text-[15px] sm:text-base font-normal leading-[27.52px]">
           {answer}
         </p>
       </div>

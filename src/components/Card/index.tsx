@@ -22,7 +22,7 @@ export const Card: FC<Props> = ({ title, description, image }) => {
       <h2 className="text-studycrest-13 text-xl font-semibold leading-[29.28px] pb-2">
         {title}
       </h2>
-      <p className="pb-3 text-studycrest-12 text-base font-normal leading-[22.72px]">
+      <p className="pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]">
         {description}
       </p>
     </div>

@@ -16,8 +16,8 @@ const Feature: FC<Props> = ({ title, description, image, noWrap }) => {
       </h2>
       <p
         className={`${
-          noWrap && "w-[372px]"
-        } pb-3 text-studycrest-12 text-base font-normal leading-[22.72px]`}
+          noWrap && "sm:max-w-[372px]"
+        } pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]`}
       >
         {description}
       </p>
