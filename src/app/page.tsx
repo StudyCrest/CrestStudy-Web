@@ -1,12 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { Card } from "@/components/Card";
 import Faq from "@/components/Faq";
 import Feature from "@/components/Features";
 import Link from "@/components/Link";
 import { TitleName } from "@/components/SectionComp/TitleName";
 import { TitleTag } from "@/components/SectionComp/TitleTag";
-import Image from "next/image";
 
 export default function Home() {
   return (
