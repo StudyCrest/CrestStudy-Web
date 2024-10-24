@@ -151,26 +151,28 @@ export default function Home() {
             extraStyle="w-[563px]"
           />
         </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center mt-5">
-          <div className="mr-5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center mt-5 space-y-5 sm:space-y-0 sm:space-x-5">
+          <div>
             <Card
               image="/assets/create-account.svg"
               title="Create an account"
               description="Start by signing up with your email or social media accounts. It's quick and easy!"
             />
           </div>
-          <div className="mr-5">
+          <div>
             <Card
               image="/assets/setting.svg"
               title="Complete KYC & Personalize Dashboard"
               description="Complete the KYC process by entering your school, academic level, and courses to tailor the platform to your specific needs."
             />
           </div>
-          <Card
-            image="/assets/study-benefit.svg"
-            title="Enjoy Study Benefits"
-            description="Access personalized schedules, practice questions, receive timely reminders, and track your progress,"
-          />
+          <div>
+            <Card
+              image="/assets/study-benefit.svg"
+              title="Enjoy Study Benefits"
+              description="Access personalized schedules, practice questions, receive timely reminders, and track your progress."
+            />
+          </div>
         </div>
       </section>
 

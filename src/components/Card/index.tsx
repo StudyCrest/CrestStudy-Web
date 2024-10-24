@@ -9,7 +9,7 @@ interface Props {
 
 export const Card: FC<Props> = ({ title, description, image }) => {
   return (
-    <div>
+    <div className="text-center">
       <div className="flex justify-center">
         <Image
           src={image}
@@ -22,9 +22,11 @@ export const Card: FC<Props> = ({ title, description, image }) => {
       <h2 className="text-studycrest-13 text-xl font-semibold leading-[29.28px] pb-2">
         {title}
       </h2>
-      <p className="pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]">
-        {description}
-      </p>
+      <div className="flex justify-center">
+        <p className="w-[311px] pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
