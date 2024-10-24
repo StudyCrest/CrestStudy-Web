@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface Props {
   title: string;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export const Card: FC<Props> = ({ title, description, image }) => {
+  const pathname = usePathname();
+
   return (
     <div className="text-center">
       <div className="flex justify-center">
@@ -23,7 +26,11 @@ export const Card: FC<Props> = ({ title, description, image }) => {
         {title}
       </h2>
       <div className="flex justify-center">
-        <p className="w-[311px] pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]">
+        <p
+          className={`${
+            pathname === "/about" ? "w-[420px]" : "w-[311px]"
+          } pb-3 text-studycrest-12 text-[15px] sm:text-base font-normal leading-[22.72px]`}
+        >
           {description}
         </p>
       </div>
