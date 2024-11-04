@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className="relative bg-studycrest-19 pb-10 pt-52 sm:pt-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 absolute -top-24 left-1/2 transform -translate-x-1/2">
-        <div className="bg-studycrest-20 rounded-lg shadow-footer">
+        <div className="bg-studycrest-20 rounded-lg shadow-main">
           <div className="flex flex-col items-center sm:items-start lg:flex-row justify-between py-5 lg:py-[48px] px-10">
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex justify-center">

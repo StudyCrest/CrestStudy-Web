@@ -86,7 +86,7 @@ const config: Config = {
       boxShadow: {
         "custom-light": "0 4px 6px rgba(0, 0, 0, 0.1)", // Light shadow
         "custom-dark": "0 6px 12px rgba(0, 0, 0, 0.2)", // Darker shadow
-        footer: "0px -2px 42px 0px rgba(0, 0, 0, 0.03)",
+        main: "0px 0px 42px 0px rgba(0, 0, 0, 0.1)"
       },
       transitionDuration: {
         "0": "0ms",
