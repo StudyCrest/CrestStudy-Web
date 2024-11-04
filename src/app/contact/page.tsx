@@ -7,8 +7,6 @@ import toast from "react-hot-toast";
 import { CommonHero } from "@/components/CommonHero";
 import TextField from "@/components/Input/TextField";
 import { submitEnquiry } from "@/services/contact/contact.service";
-import { useModalContext } from "@/context/ModalContext";
-import SubmitEnquiry from "@/components/Modal/SubmitEnquiry";
 import TextArea from "@/components/Input/TextArea";
 import Button from "@/components/Button";
 import ErrorMessage from "@/components/ErrorMessage";
@@ -27,7 +25,6 @@ export default function ContactUs() {
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactUsFormValues>();
-  const { setModalContent } = useModalContext();
 
   // Submit Enquiry form
   const handleSubmitEnquiry = async (data: ContactUsFormValues) => {
@@ -41,7 +38,6 @@ export default function ContactUs() {
         },
       });
       reset();
-      // setModalContent(<SubmitEnquiry />);
     } catch (error: any) {
       toast.error(error.message || "Failed to submit enquiry.", {
         position: "top-right",
