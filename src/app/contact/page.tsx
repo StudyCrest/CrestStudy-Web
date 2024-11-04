@@ -46,7 +46,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="pb-40">
+    <section className="pb-14 xl:pb-40">
       {/* Hero Section */}
       <section className="bg-studycrest-11 max-h-full lg:max-h-full pb-40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,19 +58,19 @@ export default function ContactUs() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-20 relative -top-36 min-h-full">
-        <div className="bg-studycrest-20 shadow-main flex justify-between py-6 pl-8 pr-3 rounded-2xl">
-          <div className="mt-10">
+      <section className="container mx-auto px-4 md:px-28 lg:px-40 xl:px-20 2xl:px-48 relative -top-36 min-h-full">
+        <div className="bg-studycrest-20 shadow-main flex justify-center xl:justify-between py-8 xl:py-6 pl-8 pr-8 xl:pr-3 rounded-2xl">
+          <div className="xl:mt-10">
             <h2 className="text-studycrest-6 font-bold text-[28px] leading-[33.6px]">
               Enquiry Form
             </h2>
-            <p className="text-studycrest-3 font-normal text-base leading[22.72px] py-3 w-[461px]">
+            <p className="text-studycrest-3 font-normal text-[15px] sm:text-base leading[22.72px] py-3 xl:w-[461px]">
               Kindly fill this form with the correct details and we would get
               back to you as soon as possible.
             </p>
 
             <form className="mt-3" onSubmit={handleSubmit(handleSubmitEnquiry)}>
-              <div className="lg:w-[260px] xl:w-[461px] h-[112px]">
+              <div className="w-full xl:w-[461px] h-[112px]">
                 <TextField
                   label="Full Name"
                   type="text"
@@ -89,7 +89,7 @@ export default function ContactUs() {
                 )}
               </div>
 
-              <div className="lg:w-[260px] xl:w-[461px] h-[112px]">
+              <div className="w-full xl:w-[461px] h-[112px]">
                 <TextField
                   label="Email Address"
                   type="email"
@@ -112,7 +112,7 @@ export default function ContactUs() {
                 )}
               </div>
 
-              <div className="lg:w-[260px] xl:w-[461px] h-[112px]">
+              <div className="w-full xl:w-[461px] h-[112px]">
                 <TextField
                   label="Subject"
                   type="text"
@@ -131,7 +131,7 @@ export default function ContactUs() {
                 )}
               </div>
 
-              <div className="lg:w-[260px] xl:w-[461px] h-[215px]">
+              <div className="w-full xl:w-[461px] h-[215px]">
                 <TextArea
                   label="Message"
                   placeholder="Enter your message"
@@ -163,7 +163,7 @@ export default function ContactUs() {
               alt="Contact us image"
               width={550}
               height={715}
-              className="rounded-lg mr-4 cursor-pointer"
+              className="rounded-lg mr-4 cursor-pointer hidden xl:flex"
             />
           </div>
         </div>
