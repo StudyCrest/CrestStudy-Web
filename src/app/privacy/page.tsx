@@ -239,7 +239,7 @@ export default function Privacy() {
         </div>
 
         <div className="mt-5">
-          <h2 className="text-[20px] font-bold">7. Children's Privacy</h2>
+          <h2 className="text-[20px] font-bold">7. Children&apos;s Privacy</h2>
           <p className="leading-[30px] pt-2">
             <span className="font-bold">CrestStudy</span> is not intended for
             children under the age of 13. We do not knowingly collect personal
@@ -264,7 +264,7 @@ export default function Privacy() {
         <div className="mt-5">
           <h2 className="text-[20px] font-bold">9. Contact Us</h2>
           <p className="leading-[30px] pt-2">
-            Don't hesitate to contact us if you have any questions.
+            Don&apos;t hesitate to contact us if you have any questions.
           </p>
           <p className="leading-[30px] pt-2">
             - Email:{" "}
