@@ -4,7 +4,7 @@ import { CommonHero } from "@/components/CommonHero";
 
 export default function Privacy() {
   return (
-    <section className="pb-14 xl:pb-40">
+    <section className="pb-40">
       {/* Hero Section */}
       <section className="bg-studycrest-11 max-h-full lg:max-h-full pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
