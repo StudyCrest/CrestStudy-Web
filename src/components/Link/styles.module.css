@@ -7,7 +7,7 @@
 }
 
 .outlined {
-  @apply bg-[#FFFFFF] text-studycrest-primary border border-studycrest-primary rounded-lg;
+  @apply text-studycrest-primary border border-studycrest-primary rounded-lg;
 }
 
 .small {
@@ -15,9 +15,9 @@
 }
 
 .medium {
-  @apply text-base px-3 py-1;
+  @apply text-base px-[22px] py-3;
 }
 
 .large {
-  @apply text-base px-[22px] py-3;
+  @apply text-base px-[50px] py-4;
 }

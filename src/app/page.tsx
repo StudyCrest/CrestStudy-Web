@@ -1,116 +1,207 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import { Toaster } from "react-hot-toast";
-import toast from "react-hot-toast";
 import Image from "next/image";
-import Button from "@/components/Button";
-import TextField from "@/components/Input/TextField";
-import { joinWaitlist } from "@/services/waitlist/waitlist.service";
-import ErrorMessage from "@/components/ErrorMessage";
-import { useModalContext } from "@/context/ModalContext";
-import WaitlistSubmission from "@/components/Modal/WaitlistSubmission";
-
-interface WaitlistFormValues {
-  email: string;
-}
+import { Card } from "@/components/Card";
+import Faq from "@/components/Faq";
+import Feature from "@/components/Features";
+import Link from "@/components/Link";
+import { TitleName } from "@/components/SectionComp/TitleName";
+import { TitleTag } from "@/components/SectionComp/TitleTag";
 
 export default function Home() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<WaitlistFormValues>();
-  const { setModalContent } = useModalContext();
-
-  // Join waitlist function
-  const handleJoinWaitlist = async (data: WaitlistFormValues) => {
-    try {
-      const response = await joinWaitlist(data);
-      toast.success(`${response?.message}`, {
-        position: "top-right",
-        style: {
-          background: "#ffffff",
-          color: "#637A87",
-        },
-      });
-      reset();
-      setModalContent(<WaitlistSubmission />);
-    } catch (error: any) {
-      toast.error(error.message || "Failed to join waitlist.", {
-        position: "top-right",
-      });
-    }
-  };
-
   return (
-    <section className="bg-white pb-20 xl:pb-0">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center">
-        {/* Left Section: Text */}
-        <div className="lg:w-1/2 w-full text-left mt-28 lg:mt-32">
-          <h2 className="text-studycrest-primary font-medium text-sm uppercase mb-4 leading-[16.8px] dropping-soon rounded py-2 px-3 w-[142px] h-[33px]">
-            Dropping Soon!!!
-          </h2>
-          <h1 className="text-3xl sm:text-4xl lg:text-[52px] leading-tight lg:leading-[62.4px] font-semibold mb-4 text-studycrest-6">
-            Study Better, Track Progress, and Ace your exams with ease.
-          </h1>
-          <p className="text-base text-studycrest-3 font-normal mb-6 leading-relaxed lg:leading-[25.92px]">
-            Get ready to transform the way you study! Our innovative platform is
-            designed to make learning more efficient and fun — everything you
-            need to stay on top of your academic game is just around the corner.
-          </p>
-          <p className="text-sm text-studycrest-4 mb-3 font-semibold uppercase leading-[21.76px]">
-            Get notified when we launch
-          </p>
+    <section className="pb-40">
+      {/* Hero Section */}
+      <section className="bg-studycrest-11 max-h-full lg:max-h-full 2xl:pb-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <div className="w-full max-w-[838px] text-center mt-32 xl:mt-40">
+              <h1 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] leading-tight lg:leading-[67.2px] font-semibold mb-4 text-studycrest-6">
+                CrestStudy - Academic Success Made Simple and Achievable.
+              </h1>
+              <div className="flex justify-center mb-7">
+                <p className="w-full max-w-[575px] text-center text-[15px] sm:text-base text-studycrest-3 font-normal leading-relaxed lg:leading-[25.92px]">
+                  Our personalized study schedules, progress-tracking tools, and
+                  daily reminders keep you on course to achieve your academic
+                  goals effortlessly.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row justify-center">
+                <div className="mr-0 sm:mr-5">
+                  <Link
+                    href="/"
+                    title="Get Started"
+                    asButton={true}
+                    size="large"
+                  />
+                </div>
+                <div className="mt-10 sm:mt-0">
+                  <Link
+                    href="/contact"
+                    title="Contact Us"
+                    asButton={true}
+                    variant="outlined"
+                    size="large"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <form
-            onSubmit={handleSubmit(handleJoinWaitlist)}
-            className="min-h-[120px]"
-            id="waitlistform"
-          >
-            <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-4 border border-studycrest-2 bg-studycrest-1 rounded-xl p-3 w-full">
-              <TextField
-                type="email"
-                placeholder="Enter your email address"
-                className="border border-studycrest-9 rounded-md py-[14px] px-4 focus:outline-none w-full lg:w-[260px] xl:w-[373px]"
-                register={register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Please enter a valid email address",
-                  },
-                })}
-              />
+          {/* Hero Image */}
+          <div className="flex justify-center mt-14">
+            <Image
+              src="/assets/new-hero-image.svg"
+              alt="CrestStudy app"
+              width={800}
+              height={800}
+              className="rounded-lg"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </div>
+        </div>
+      </section>
 
-              <Button
-                title="Join the waitlist"
-                extraStyle="w-full"
-                loading={isSubmitting}
-                disabled={isSubmitting}
+      {/* CrestStudy Features */}
+      <section className="mt-16 sm:mt-24">
+        <div className="flex justify-center">
+          <TitleTag title="CrestStudy features" />
+        </div>
+        <div className="flex justify-center">
+          <TitleName title="Why choose CrestStudy?" />
+        </div>
+        <div className="flex justify-center mb-7">
+          <p className="px-6 sm:px-0 sm:w-[550px] text-center text-[15px] sm:text-base text-studycrest-12 font-normal leading-relaxed lg:leading-[22.72px]">
+            CrestStudy empowers students with Tailored Study Plans, Expert
+            Guidance, and Comprehensive Resources to Achieve Their Full
+            Potential
+          </p>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <div className="lg:mr-5">
+            <div className="mb-5">
+              <Feature
+                title={"Personalized Study Schedule"}
+                description={
+                  "Set daily sessions and track progress with automated to-do lists."
+                }
+                image={"/assets/study-schedule.svg"}
+                noWrap={true}
               />
             </div>
-            {errors.email && (
-              <ErrorMessage
-                className="pl-1 pt-[6px] p-0"
-                message={errors.email.message as string}
-              />
-            )}
-          </form>
+            <Feature
+              title={"Weekly Report Card & Analytics"}
+              description={
+                "You receive a detailed weekly report card from us with analytics on your study habits and progress, helping you track your performance in each course."
+              }
+              image={"/assets/weekly-analytics.svg"}
+              noWrap={true}
+            />
+          </div>
+          <div className="hidden lg:flex lg:items-start">
+            <Image
+              src={"/assets/feature-main.svg"}
+              alt="CrestStudy app"
+              width={480}
+              height={480}
+              className="rounded-lg"
+            />
+          </div>
         </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center items-center lg:items-start">
+          <div className="lg:mr-3 lg:w-[300px]">
+            <Feature
+              title={"Daily Streaks & Rewards"}
+              description={
+                "Stay motivated with rewards for your daily study streaks."
+              }
+              noWrap={true}
+              image={"/assets/streak.svg"}
+            />
+          </div>
+          <div className="lg:mr-3 lg:w-[300px]">
+            <Feature
+              title={"Automated To-Do Lists"}
+              description={
+                "Organize your tasks effortlessly with our automated to-do lists that keep you focused on what needs to be done each day."
+              }
+              noWrap={true}
+              image={"/assets/todo.svg"}
+            />
+          </div>
+          <div className="lg:w-[300px]">
+            <Feature
+              title={"Reminders & Notifications"}
+              description={"Never miss a session with our daily reminders."}
+              noWrap={true}
+              image={"/assets/reminder.svg"}
+            />
+          </div>
+        </div>
+      </section>
 
-        {/* Right Section: Image */}
-        <div className="lg:w-[40%] w-full hidden lg:block mt-44">
-          <Image
-            src="/assets/heroimage.svg"
-            alt="CrestStudy app preview"
-            width={500}
-            height={500}
-            className="rounded-lg"
+      {/* How it works */}
+      <section className="mt-16 sm:mt-24 text-center">
+        <div className="flex justify-center">
+          <TitleTag title="How it works" />
+        </div>
+        <div className="flex justify-center">
+          <TitleName
+            title="Streamline your study routine in three steps"
+            extraStyle="w-[563px]"
           />
         </div>
-      </div>
-      <Toaster />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center mt-5 space-y-5 sm:space-y-0 sm:space-x-5">
+          <div>
+            <Card
+              image="/assets/create-account.svg"
+              title="Create an account"
+              description="Start by signing up with your email or social media accounts. It's quick and easy!"
+            />
+          </div>
+          <div>
+            <Card
+              image="/assets/setting.svg"
+              title="Complete KYC & Personalize Dashboard"
+              description="Complete the KYC process by entering your school, academic level, and courses to tailor the platform to your specific needs."
+            />
+          </div>
+          <div>
+            <Card
+              image="/assets/study-benefit.svg"
+              title="Enjoy Study Benefits"
+              description="Access personalized schedules, practice questions, receive timely reminders, and track your progress."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="mt-16 sm:mt-24 text-center">
+        <div className="flex justify-center">
+          <TitleTag title="Frequently Asked Questions" />
+        </div>
+        <div className="flex justify-center">
+          <TitleName
+            title="Have a question? We've got you covered"
+            extraStyle="w-[420px]"
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
+          <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
+            <Image
+              src="/assets/faq.svg"
+              alt="CrestStudy FAQs"
+              width={300}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+          <div className="lg:w-[70%]">
+            <Faq />
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
