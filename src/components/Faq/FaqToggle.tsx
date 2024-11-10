@@ -34,7 +34,7 @@ const FaqToggle = ({ question, answer }) => {
       </div>
       <div
         className={`faq-answer overflow-hidden transition-all duration-300 text-left ${
-          isOpen ? "min-h-40 p-4" : "max-h-0"
+          isOpen ? "max-h-52 p-4" : "max-h-0"
         }`}
       >
         <p className="text-studycrest-13 text-[15px] sm:text-base font-normal leading-[27.52px]">
