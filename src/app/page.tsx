@@ -29,8 +29,8 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row justify-center">
                 <div className="mr-0 sm:mr-5">
                   <Link
-                    href="/"
-                    title="Get Started"
+                    href="/waitlist"
+                    title="Join Waitlist"
                     asButton={true}
                     size="large"
                   />

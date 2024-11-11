@@ -62,7 +62,7 @@ export const Header = () => {
 
         {/* Call to action button */}
         <div className="hidden lg:flex items-center space-x-4">
-          <Link href="/" title="Get Started" asButton={true} />
+          <Link href="/waitlist" title="Join waitlist" asButton={true} />
         </div>
       </div>
 
@@ -87,7 +87,7 @@ export const Header = () => {
               </li>
             ))}
             <li className="pt-3 px-4">
-              <Link href="/" title="Get Started" asButton={true} />
+              <Link href="/waitlist" title="Join Waitlist" asButton={true} />
             </li>
           </ul>
         </nav>
