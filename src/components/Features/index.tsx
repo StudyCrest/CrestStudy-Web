@@ -26,6 +26,7 @@ const Feature: FC<Props> = ({ title, description, image, noWrap }) => {
         alt="CrestStudy app"
         width={350}
         height={350}
+        quality={100}
         className="rounded-lg"
       />
     </div>

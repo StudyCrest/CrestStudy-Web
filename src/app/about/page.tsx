@@ -25,6 +25,7 @@ export default function About() {
               alt="CrestStudy app About"
               width={1280}
               height={547}
+              priority={true}
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -45,6 +46,7 @@ export default function About() {
               alt="CrestStudy app About"
               width={560}
               height={390}
+              loading="lazy"
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -66,10 +68,10 @@ export default function About() {
           <div className="flex flex-col-reverse xl:flex-row items-center bg-white rounded-lg p-6 mt-7">
             <div className="xl:mr-14 mt-10 xl:mt-0">
               <h2 className="text-studycrest-6 font-semibold text-2xl sm:text-[30px] lg:text-[40px] leading-[52.8px]">
-                The Birth of StudyCrest
+                The Birth of CrestStudy
               </h2>
               <p className="text-studycrest-3 font-normal text-base lg:text-xl leading-[30px] lg:leading-[38.4px] pt-3">
-                StudyCrest was born from a simple idea: to help students
+                CrestStudy was born from a simple idea: to help students
                 overcome these challenges head-on. The platform provides
                 structure and support, simplifying the path to academic success.
               </p>
@@ -79,6 +81,7 @@ export default function About() {
               alt="CrestStudy app About"
               width={560}
               height={390}
+              loading="lazy"
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -90,6 +93,7 @@ export default function About() {
               alt="CrestStudy app About"
               width={560}
               height={390}
+              loading="lazy"
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -100,7 +104,7 @@ export default function About() {
               <p className="text-studycrest-3 font-normal text-base lg:text-xl leading-[30px] lg:leading-[38.4px] pt-3">
                 With personalized study schedules, progress tracking tools,
                 daily streaks, rewards, and an automated to-do list with daily
-                reminders, StudyCrest empowers students to stay motivated and on
+                reminders, CrestStudy empowers students to stay motivated and on
                 track throughout their academic journey.
               </p>
             </div>
@@ -152,6 +156,7 @@ export default function About() {
               alt="CrestStudy FAQs"
               width={300}
               height={300}
+              loading="lazy"
               className="rounded-lg"
             />
           </div>

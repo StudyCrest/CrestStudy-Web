@@ -55,6 +55,11 @@ export default function Home() {
               alt="CrestStudy app"
               width={800}
               height={800}
+              layout="responsive"
+              quality={80}
+              sizes="(max-width: 768px) 100vw, 
+           (max-width: 1200px) 50vw, 
+           33vw"
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
