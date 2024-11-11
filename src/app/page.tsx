@@ -51,15 +51,11 @@ export default function Home() {
           {/* Hero Image */}
           <div className="flex justify-center mt-14">
             <Image
-              src="/assets/new-hero-image.jpg"
+              src="/assets/new-hero-image.png"
               alt="CrestStudy app"
               width={800}
               height={800}
-              layout="responsive"
               quality={80}
-              sizes="(max-width: 768px) 100vw, 
-           (max-width: 1200px) 50vw, 
-           33vw"
               className="rounded-lg"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -84,13 +80,13 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
           <div className="lg:mr-5">
-            <div className="mb-5">
+            <div className="mb-0">
               <Feature
                 title={"Personalized Study Schedule"}
                 description={
                   "Set daily sessions and track progress with automated to-do lists."
                 }
-                image={"/assets/study-schedule.svg"}
+                image={"/assets/study-schedule-new.png"}
                 noWrap={true}
               />
             </div>
@@ -99,13 +95,13 @@ export default function Home() {
               description={
                 "You receive a detailed weekly report card from us with analytics on your study habits and progress, helping you track your performance in each course."
               }
-              image={"/assets/weekly-analytics.svg"}
+              image={"/assets/weekly-analytics-new.png"}
               noWrap={true}
             />
           </div>
           <div className="hidden lg:flex lg:items-start">
             <Image
-              src={"/assets/feature-main_new.svg"}
+              src={"/assets/features-main.jpg"}
               alt="CrestStudy app"
               width={480}
               height={480}
@@ -121,7 +117,7 @@ export default function Home() {
                 "Stay motivated with rewards for your daily study streaks."
               }
               noWrap={true}
-              image={"/assets/streak.svg"}
+              image={"/assets/streak.png"}
             />
           </div>
           <div className="lg:mr-3 lg:w-[300px]">
@@ -131,7 +127,7 @@ export default function Home() {
                 "Organize your tasks effortlessly with our automated to-do lists that keep you focused on what needs to be done each day."
               }
               noWrap={true}
-              image={"/assets/todo.svg"}
+              image={"/assets/todo-list.png"}
             />
           </div>
           <div className="lg:w-[300px]">
@@ -139,7 +135,7 @@ export default function Home() {
               title={"Reminders & Notifications"}
               description={"Never miss a session with our daily reminders."}
               noWrap={true}
-              image={"/assets/reminder.svg"}
+              image={"/assets/notifications.png"}
             />
           </div>
         </div>
@@ -194,7 +190,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
           <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
             <Image
-              src="/assets/faq.svg"
+              src="/assets/student-faq.jpg"
               alt="CrestStudy FAQs"
               width={300}
               height={300}

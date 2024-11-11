@@ -159,7 +159,7 @@ export default function ContactUs() {
           </div>
           <div>
             <Image
-              src="/assets/contact_new.svg"
+              src="/assets/contact-us.jpg"
               alt="Contact us image"
               width={550}
               height={715}

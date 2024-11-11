@@ -21,7 +21,7 @@ export default function About() {
           {/* Hero Image */}
           <div className="flex justify-center mt-5">
             <Image
-              src="/assets/about_new.jpg"
+              src="/assets/about-uss.jpg"
               alt="CrestStudy app About"
               width={1280}
               height={547}
@@ -42,7 +42,7 @@ export default function About() {
 
           <div className="flex flex-col xl:flex-row items-center bg-white rounded-lg p-6 mt-4 xl:mt-7">
             <Image
-              src="/assets/study-struggle_new.jpg"
+              src="/assets/study-struggle.jpg"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -77,7 +77,7 @@ export default function About() {
               </p>
             </div>
             <Image
-              src="/assets/about-creststudy-logo_new.jpg"
+              src="/assets/about-creststudy-logo.png"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -89,7 +89,7 @@ export default function About() {
 
           <div className="flex flex-col xl:flex-row items-center bg-white rounded-lg p-6 mt-7">
             <Image
-              src="/assets/success_new.jpg"
+              src="/assets/study-success.jpg"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -150,7 +150,7 @@ export default function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
           <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
             <Image
-              src="/assets/faq.svg"
+              src="/assets/student-faq.jpg"
               alt="CrestStudy FAQs"
               width={300}
               height={300}
