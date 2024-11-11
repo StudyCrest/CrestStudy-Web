@@ -163,8 +163,8 @@ export default function Home() {
           <div>
             <Card
               image="/assets/setting.svg"
-              title="Complete KYC & Personalize Dashboard"
-              description="Complete the KYC process by entering your school, academic level, and courses to tailor the platform to your specific needs."
+              title="Complete Bio-data & Personalize Dashboard"
+              description="Complete the Bio-data process by entering your school, academic level, and courses to tailor the platform to your specific needs."
               width={true}
             />
           </div>
