@@ -6,9 +6,10 @@ interface Props {
   title: string;
   description: string;
   image: string;
+  width?: boolean;
 }
 
-export const Card: FC<Props> = ({ title, description, image }) => {
+export const Card: FC<Props> = ({ title, description, image, width }) => {
   const pathname = usePathname();
 
   return (
@@ -22,7 +23,11 @@ export const Card: FC<Props> = ({ title, description, image }) => {
           className="rounded-lg"
         />
       </div>
-      <h2 className="text-studycrest-13 text-xl font-semibold leading-[29.28px] pb-2">
+      <h2
+        className={`flex justify-center text-center text-studycrest-13 text-xl font-semibold leading-[29.28px] pb-2 ${
+          width && "px-10"
+        }`}
+      >
         {title}
       </h2>
       <div className="flex justify-center">

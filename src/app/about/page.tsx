@@ -21,7 +21,7 @@ export default function About() {
           {/* Hero Image */}
           <div className="flex justify-center mt-5">
             <Image
-              src="/assets/about.svg"
+              src="/assets/about_new.jpg"
               alt="CrestStudy app About"
               width={1280}
               height={547}
@@ -42,7 +42,7 @@ export default function About() {
 
           <div className="flex flex-col xl:flex-row items-center bg-white rounded-lg p-6 mt-4 xl:mt-7">
             <Image
-              src="/assets/study-struggle.svg"
+              src="/assets/study-struggle_new.jpg"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -54,7 +54,7 @@ export default function About() {
               <h2 className="text-studycrest-6 font-semibold text-2xl sm:text-[30px] lg:text-[40px] leading-[52.8px]">
                 The Student Struggle
               </h2>
-              <p className="text-studycrest-3 font-normal text-base lg:text-xl leading-[30px] lg:leading-[38.4px] pt-3">
+              <p className="text-studycrest-3 font-normal text-[15px] sm:text-base leading-[30px] sm:leading-[37px] pt-3">
                 We understand the struggles students face in balancing academic
                 goals with daily responsibilities. Many start each semester with
                 high hopes of achieving their academic potential. However,
@@ -70,14 +70,14 @@ export default function About() {
               <h2 className="text-studycrest-6 font-semibold text-2xl sm:text-[30px] lg:text-[40px] leading-[52.8px]">
                 The Birth of CrestStudy
               </h2>
-              <p className="text-studycrest-3 font-normal text-base lg:text-xl leading-[30px] lg:leading-[38.4px] pt-3">
+              <p className="text-studycrest-3 font-normal text-[15px] sm:text-base leading-[30px] sm:leading-[37px] pt-3">
                 CrestStudy was born from a simple idea: to help students
                 overcome these challenges head-on. The platform provides
                 structure and support, simplifying the path to academic success.
               </p>
             </div>
             <Image
-              src="/assets/about-creststudy-logo.svg"
+              src="/assets/about-creststudy-logo_new.jpg"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -89,7 +89,7 @@ export default function About() {
 
           <div className="flex flex-col xl:flex-row items-center bg-white rounded-lg p-6 mt-7">
             <Image
-              src="/assets/success.svg"
+              src="/assets/success_new.jpg"
               alt="CrestStudy app About"
               width={560}
               height={390}
@@ -101,7 +101,7 @@ export default function About() {
               <h2 className="text-studycrest-6 font-semibold text-2xl sm:text-[30px] lg:text-[40px] leading-[52.8px]">
                 Tailored Solution for Success
               </h2>
-              <p className="text-studycrest-3 font-normal text-base lg:text-xl leading-[30px] lg:leading-[38.4px] pt-3">
+              <p className="text-studycrest-3 font-normal text-[15px] sm:text-base leading-[30px] sm:leading-[37px] pt-3">
                 With personalized study schedules, progress tracking tools,
                 daily streaks, rewards, and an automated to-do list with daily
                 reminders, CrestStudy empowers students to stay motivated and on
@@ -143,11 +143,9 @@ export default function About() {
         <div className="flex justify-center">
           <TitleTag title="Frequently Asked Questions" />
         </div>
-        <div className="flex justify-center">
-          <TitleName
-            title="Have a question? We've got you covered"
-            extraStyle="w-[420px]"
-          />
+        <div className="flex flex-col items-center pb-4">
+          <TitleName title="Have a question?" />
+          <TitleName title="We've got you covered" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
           <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">

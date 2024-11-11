@@ -51,7 +51,7 @@ export default function Home() {
           {/* Hero Image */}
           <div className="flex justify-center mt-14">
             <Image
-              src="/assets/new-hero-image.svg"
+              src="/assets/new-hero-image.jpg"
               alt="CrestStudy app"
               width={800}
               height={800}
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:items-start">
             <Image
-              src={"/assets/feature-main.svg"}
+              src={"/assets/feature-main_new.svg"}
               alt="CrestStudy app"
               width={480}
               height={480}
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="flex justify-center">
           <TitleName
             title="Streamline your study routine in three steps"
-            extraStyle="w-[563px]"
+            extraStyle="w-[350px] sm:w-[563px]"
           />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-center mt-5 space-y-5 sm:space-y-0 sm:space-x-5">
@@ -169,6 +169,7 @@ export default function Home() {
               image="/assets/setting.svg"
               title="Complete KYC & Personalize Dashboard"
               description="Complete the KYC process by entering your school, academic level, and courses to tailor the platform to your specific needs."
+              width={true}
             />
           </div>
           <div>
@@ -186,11 +187,9 @@ export default function Home() {
         <div className="flex justify-center">
           <TitleTag title="Frequently Asked Questions" />
         </div>
-        <div className="flex justify-center">
-          <TitleName
-            title="Have a question? We've got you covered"
-            extraStyle="w-[420px]"
-          />
+        <div className="flex flex-col items-center pb-4">
+          <TitleName title="Have a question?" />
+          <TitleName title="We've got you covered" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
           <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
