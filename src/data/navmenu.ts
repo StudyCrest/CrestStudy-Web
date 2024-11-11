@@ -12,7 +12,7 @@ export const navMenu = [
   {
     id: 3,
     name: "Blog",
-    url: "https://creststudy.hashnode.dev/",
+    url: "https://creststudy.substack.com/",
   },
   {
     id: 4,
