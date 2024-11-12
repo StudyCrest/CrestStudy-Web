@@ -51,7 +51,7 @@ export default function Home() {
           {/* Hero Image */}
           <div className="flex justify-center mt-14">
             <Image
-              src="/assets/new-hero-image.png"
+              src="/assets/hero-image.png"
               alt="CrestStudy app"
               width={800}
               height={800}
