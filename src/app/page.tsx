@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <section className="pb-40">
       {/* Hero Section */}
-      <section className="bg-studycrest-11 max-h-full lg:max-h-full 2xl:pb-10">
+      <section className="bg-studycrest-11 max-h-full lg:max-h-full">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <div className="w-full max-w-[838px] text-center mt-32 xl:mt-40">
