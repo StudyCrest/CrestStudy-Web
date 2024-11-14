@@ -183,12 +183,12 @@ export default function Home() {
         <div className="flex justify-center">
           <TitleTag title="Frequently Asked Questions" />
         </div>
-        <div className="flex flex-col items-center pb-4">
+        <div className="flex flex-col items-center pb-10">
           <TitleName title="Have a question?" />
           <TitleName title="We've got you covered" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex">
-          <div className="hidden lg:flex justify-end items-start -mt-14 w-[30%]">
+          <div className="hidden lg:flex justify-end items-start w-[30%]">
             <Image
               src="/assets/student-faq.jpg"
               alt="CrestStudy FAQs"
