@@ -23,7 +23,11 @@ export default function Footer() {
               </h2>
             </div>
             <div className="flex items-center space-x-4 mt-5 lg:mt-0">
-              <LinkComp href="/" title="Get Started" asButton={true} />
+              <LinkComp
+                href="/waitlist"
+                title="Join Waitlist"
+                asButton={true}
+              />
             </div>
           </div>
         </div>

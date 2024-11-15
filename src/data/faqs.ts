@@ -19,11 +19,6 @@ export const faqs = [
       "CrestStudy tracks your completion of study sessions and updates your progress for each course. You'll also receive weekly reports on your overall progress, helping you visualize how much you've accomplished and where you need to improve.",
   },
   {
-    question: "Can I use CrestStudy on multiple devices?",
-    answer:
-      "No! You can't access CrestStudy across multiple devices yet; it is a mobile app and can only be assessed through your tablet and smartphone. This allows you to stay connected with your study schedule wherever you go.",
-  },
-  {
     question: "Can CrestStudy help with exam preparation?",
     answer:
       "CrestStudy only helps you plan and set reminders for your study sessions to ensure you cover all the necessary course materials in time before exams so you're fully prepared.",
