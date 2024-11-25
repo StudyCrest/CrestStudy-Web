@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center space-x-4 mt-5 lg:mt-0">
               <LinkComp
-                href="/waitlist"
+                href="/join-waitlist"
                 title="Join Waitlist"
                 asButton={true}
               />

@@ -7,7 +7,7 @@ const WaitlistSubmission = () => {
   return (
     <div className="container max-w-lg mx-auto">
       <div className="border border-studycrest-2 bg-white rounded-xl px-5 pt-5 pb-7">
-        {pathname == "/webinar" && (
+        {pathname == "/waitlist" && (
           <p className="pb-5 text-xl font-semibold text-center">
             Registration Successful!
           </p>
