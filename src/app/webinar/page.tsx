@@ -102,14 +102,14 @@ export default function Waitlist() {
           <p className="text-base text-studycrest-3 font-normal mb-6 leading-relaxed lg:leading-[25.92px]">
             Join our exclusive webinar,{" "}
             <span className="font-bold text-black">
-              Study Hacks for Academic Excellence
-            </span>
-            , and discover proven techniques to boost your academic performance.
+              Study Hacks for Academic Excellence,
+            </span>{" "}
+            and discover proven techniques to boost your academic performance.
             Learn from top achievers, gain actionable tips, and take your
             studies to the next level.
           </p>
           <p className="text-sm text-studycrest-4 mb-3 font-semibold uppercase leading-[21.76px]">
-            Don't miss out—register now and unlock your full potential!
+            Don&#39;t miss out—register now and unlock your full potential!
           </p>
 
           <form
