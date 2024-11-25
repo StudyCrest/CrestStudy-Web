@@ -64,7 +64,7 @@ export default function Waitlist() {
   // Join waitlist function
   const handleJoinWaitlist = async (data: WaitlistFormValues) => {
     try {
-      const response = await joinWaitlist(data);
+      await joinWaitlist(data);
       toast.success("Registration successful!", {
         position: "top-right",
         style: {
