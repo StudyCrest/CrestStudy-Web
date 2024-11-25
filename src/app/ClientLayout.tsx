@@ -20,7 +20,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       <Suspense fallback={<Loading />}>
         <main>{children}</main>
       </Suspense>
-      {pathname != "/waitlist" && <Footer />}
+      {pathname != "/webinar" && pathname != "/waitlist" ? <Footer /> : ""}
     </ModalProvider>
   );
 };

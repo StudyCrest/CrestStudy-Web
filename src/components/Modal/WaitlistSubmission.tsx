@@ -1,9 +1,17 @@
 import Link from "../Link";
+import { usePathname } from "next/navigation";
 
 const WaitlistSubmission = () => {
+  const pathname = usePathname();
+
   return (
     <div className="container max-w-lg mx-auto">
       <div className="border border-studycrest-2 bg-white rounded-xl px-5 pt-5 pb-7">
+        {pathname == "/webinar" && (
+          <p className="pb-5 text-xl font-semibold text-center">
+            Registration Successful!
+          </p>
+        )}
         <p className="pb-5 text-lg font-semibold text-center">
           We&#39;re excited to invite you to join our exclusive CrestStudy
           community!
