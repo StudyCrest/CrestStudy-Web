@@ -87,7 +87,7 @@ export default function Waitlist() {
         {/* Left Section: Text */}
         <div className="lg:w-1/2 w-full text-left mt-28 lg:mt-32">
           <h2 className="text-studycrest-primary font-medium text-sm uppercase mb-4 leading-[16.8px] dropping-soon rounded py-2 px-3 w-[142px] h-[33px]">
-            {timeLeft.days} Days to go!!!
+            It's Today!!!
           </h2>
           <h1 className="text-3xl sm:text-4xl lg:text-[52px] leading-tight lg:leading-[62.4px] font-semibold mb-4 text-studycrest-6">
             Topic: Study Hacks for Academic Excellence
