@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
@@ -24,42 +23,6 @@ export default function Waitlist() {
     reset,
   } = useForm<WaitlistFormValues>();
   const { setModalContent } = useModalContext();
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  const targetDate = "2024-11-30T19:00:00" as any;
-
-  // Countdown Timer
-  useEffect(() => {
-    const updateCountdown = () => {
-      const now: any = new Date();
-      const getTargetDate: any = new Date(targetDate);
-      const difference = getTargetDate - now;
-
-      if (difference <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        clearInterval(timer);
-        return;
-      }
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days, hours, minutes, seconds });
-    };
-
-    const timer = setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    return () => clearInterval(timer); // Cleanup on component unmount
-  }, [targetDate]);
 
   // Join waitlist function
   const handleJoinWaitlist = async (data: WaitlistFormValues) => {
