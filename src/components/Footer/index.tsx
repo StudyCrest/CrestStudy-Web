@@ -24,9 +24,10 @@ export default function Footer() {
             </div>
             <div className="flex items-center space-x-4 mt-5 lg:mt-0">
               <LinkComp
-                href="/join-waitlist"
-                title="Join Waitlist"
+                href="https://linktr.ee/creststudy"
+                title="Get Started"
                 asButton={true}
+                external={true}
               />
             </div>
           </div>
