@@ -72,6 +72,15 @@ export default function Footer() {
               }
             />
           ))}
+          <LinkComp
+            href="/privacy-policy"
+            title="Privacy Policy"
+            extraStyle={
+              pathname == "/privacy-policy"
+                ? "text-studycrest-primary leading-[19.2px] font-semibold pr-4"
+                : "text-studycrest-7 leading-[19.2px] font-medium hover:text-studycrest-primary pr-4"
+            }
+          />
         </nav>
       </div>
 
@@ -131,7 +140,7 @@ export default function Footer() {
       </div>
 
       <p className="text-studycrest-21 text-base font-medium leading-[19.2px] flex justify-center pt-5">
-        © Copyright 2024. All Rights Reserved
+        © Copyright 2025. All Rights Reserved
       </p>
     </div>
   );
