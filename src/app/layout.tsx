@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description,
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 
   // SEO Metadata
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
     "Education",
     "Study",
     "Crest",
+    "crest study",
+    "creststudy",
     "CrestStudy",
     "Academics",
     "Study Tools",
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@CrestStudy_",
     title: "CrestStudy",
-    description: "Crush Your Academic Goals with Ease",
+    description,
     images: [
       {
         url: "https://www.creststudy.com/assets/creststudytwitter.JPEG",
@@ -71,6 +74,28 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" className={urbanist.className}>
+      <head>
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "CrestStudy",
+              url: "https://www.creststudy.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target:
+                  "https://www.creststudy.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        {/* Preload Critical Assets */}
+        <link rel="preload" href="/assets/creststudy-og.JPG" as="image" />
+      </head>
       <body className="min-h-screen">
         <ClientLayout>{children}</ClientLayout>
       </body>

@@ -11,7 +11,8 @@ export const faqs = [
   },
   {
     question: "Is CrestStudy free to use?",
-    answer: "Yes! CrestStudy offers a free version with essential features that help you plan and track your studies. There are also premium options for more enhanced features, but the core functionality remains free.",
+    answer:
+      "Yes! CrestStudy offers a free version with essential features that help you plan and track your studies. There are also premium options for more enhanced features, but the core functionality remains free.",
   },
   {
     question: "How does the progress tracking work?",
